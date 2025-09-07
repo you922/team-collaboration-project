@@ -1,0 +1,33 @@
+{
+  "collaboration": {
+    "show_cursors": true,
+    "show_selections": true,
+    "show_user_names": true,
+    "sync_frequency": 100
+  },
+  "theme": "One Dark",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "tab_bar": {
+    "show": true
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right",
+    "default_open": true
+  },
+  "auto_save": "on_focus_change",
+  "format_on_save": "on",
+  "show_whitespaces": "selection",
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    }
+  }
+}
