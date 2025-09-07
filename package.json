@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Claude Code + Zed 团队协作开发项目",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "start": "node src/main.js",
     "test": "echo \"暂无测试 - 使用 Claude Code 生成测试\" && exit 0",
