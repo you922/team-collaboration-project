@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤝 团队协作用户管理系统 | Claude Code + Zed</title>
+    <meta name="description" content="由 Claude Code 和 Zed 协作开发的用户管理系统演示">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤝</text></svg>">
+</head>
+<body>
+    <!-- 用户界面将通过JavaScript动态创建 -->
+    
+    <!-- 加载提示 -->
+    <div id="loading" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        z-index: 9999;
+    ">
+        <h1 style="font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+            🤝 团队协作开发
+        </h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
+            Claude Code + Zed 用户管理系统
+        </p>
+        <div style="
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+        <p style="margin-top: 20px; opacity: 0.7;">
+            正在加载协作界面...
+        </p>
+    </div>
+
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+
+    <!-- 主应用脚本 -->
+    <script type="module">
+        import UserInterface from './src/user-interface.js';
+        
+        // 等待页面加载完成
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                // 初始化用户界面
+                const userInterface = new UserInterface();
+                
+                // 隐藏加载提示
+                setTimeout(() => {
+                    document.getElementById('loading').style.display = 'none';
+                }, 1000);
+                
+                console.log('🎉 团队协作用户管理系统启动成功！');
+                console.log('👥 您的 createUser 功能已实现');
+                console.log('⏳ 等待 woshiqp465 实现 loginUser 功能');
+                
+            } catch (error) {
+                console.error('❌ 系统初始化失败:', error);
+                document.getElementById('loading').innerHTML = `
+                    <h1 style="color: #ff6b6b;">⚠️ 加载失败</h1>
+                    <p>请检查浏览器控制台获取详细错误信息</p>
+                    <p style="font-size: 0.9rem; opacity: 0.7;">${error.message}</p>
+                `;
+            }
+        });
+
+        // 全局错误处理
+        window.addEventListener('error', (e) => {
+            console.error('💥 全局错误:', e.error);
+        });
+
+        // 为woshiqp465准备的登录功能接口
+        window.collaborationAPI = {
+            // woshiqp465可以调用这个方法来集成loginUser功能
+            integrateLoginFunction: function(loginFunction) {
+                console.log('🔗 集成 woshiqp465 的登录功能...');
+                // 这里可以集成woshiqp465的登录实现
+            },
+            
+            // 获取用户管理器实例
+            getUserManager: function() {
+                return window.userManager;
+            },
+            
+            // 协作状态
+            collaborationStatus: {
+                createUser: '✅ 已完成 (您)',
+                loginUser: '⏳ 待实现 (woshiqp465)',
+                updateUserProfile: '📋 待协作'
+            }
+        };
+    </script>
+</body>
+</html>
