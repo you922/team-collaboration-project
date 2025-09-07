@@ -1,0 +1,29 @@
+{
+  "name": "team-collaboration-project",
+  "version": "1.0.0",
+  "description": "Claude Code + Zed 团队协作开发项目",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"暂无测试 - 使用 Claude Code 生成测试\" && exit 0",
+    "dev": "node src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USERNAME/team-collaboration-project.git"
+  },
+  "keywords": [
+    "claude-code",
+    "zed",
+    "collaboration",
+    "ai-assisted-development"
+  ],
+  "author": "Claude Code Collaboration Team",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "woshiqp465",
+      "url": "https://github.com/woshiqp465"
+    }
+  ]
+}
